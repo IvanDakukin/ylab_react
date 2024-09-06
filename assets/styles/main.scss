@@ -1,0 +1,13 @@
+@import "null";
+@import "fonts";
+@import "mixins";
+@import "auth-form";
+
+body {
+  font-family: "Inter Tight";
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

@@ -1,0 +1,116 @@
+.auth-form {
+  background-color: white;
+  padding: 50px 40px 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+
+  @include _550 {
+	margin: 0 20px;
+	padding: 40px 20px 30px 20px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 30px;
+  }
+
+  &__field {
+    margin-bottom: 35px;
+  }
+
+  &__button {
+    background-color: #1970cc;
+    color: white;
+    display: block;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin: 40px auto;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+.field {
+  position: relative;
+
+  &__label {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    line-height: 80px;
+    color: #9d9d9d;
+    pointer-events: none;
+    transition: all 0.2s;
+    top: 0;
+    left: 20px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 70px;
+    color: #333;
+    font-size: 15px;
+    padding: 14px 50px 0 10px;
+    font-weight: bold;
+    transition: border-color 0.3s;
+	letter-spacing: 0.05em;
+
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+
+    &:focus ~ .field__label,
+    :not(&:placeholder-shown) ~ .field__label {
+      top: -20px;
+      left: 10px;
+    }
+  }
+
+  &__show-pass {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    background-image: url("./assets/icons/eye-closed.svg");
+    background-size: cover;
+
+    &.open {
+      background-image: url("./assets/icons/eye.svg");
+    }
+  }
+
+  &__error {
+    display: none;
+    position: absolute;
+    padding: 5px;
+    left: 0;
+    font-size: 13px;
+    color: rgb(212, 27, 27);
+    border-radius: 4px;
+  }
+}
+
+.auth-form__button .auth-form__message {
+  margin-top: 15px;
+  font-size: 14px;
+  color: red;
+  visibility: hidden;
+}

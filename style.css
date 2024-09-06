@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input {
+  font-family: inherit;
+}
+
+@font-face {
+  font-family: "Inter Tight";
+  src: url("./assets/fonts/InterTight.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+.auth-form {
+  background-color: white;
+  padding: 50px 40px 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+}
+@media (max-width: 550px) {
+  .auth-form {
+    margin: 0 20px;
+    padding: 40px 20px 30px 20px;
+  }
+}
+.auth-form__title {
+  margin-bottom: 40px;
+  color: #333;
+  font-size: 30px;
+}
+.auth-form__field {
+  margin-bottom: 35px;
+}
+.auth-form__button {
+  background-color: #1970cc;
+  color: white;
+  display: block;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin: 40px auto;
+  font-weight: bold;
+}
+.auth-form__button:hover {
+  background-color: #0056b3;
+}
+
+.field {
+  position: relative;
+}
+.field__label {
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+  line-height: 80px;
+  color: #9d9d9d;
+  pointer-events: none;
+  transition: all 0.2s;
+  top: 0;
+  left: 20px;
+}
+.field__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  height: 70px;
+  color: #333;
+  font-size: 15px;
+  padding: 14px 50px 0 10px;
+  font-weight: bold;
+  transition: border-color 0.3s;
+  letter-spacing: 0.05em;
+}
+.field__input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.field__input:focus ~ .field__label, :not(.field__input:placeholder-shown) ~ .field__label {
+  top: -20px;
+  left: 10px;
+}
+.field__show-pass {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  background-image: url("./assets/icons/eye-closed.svg");
+  background-size: cover;
+}
+.field__show-pass.open {
+  background-image: url("./assets/icons/eye.svg");
+}
+.field__error {
+  display: none;
+  position: absolute;
+  padding: 5px;
+  left: 0;
+  font-size: 13px;
+  color: rgb(212, 27, 27);
+  border-radius: 4px;
+}
+
+.auth-form__button .auth-form__message {
+  margin-top: 15px;
+  font-size: 14px;
+  color: red;
+  visibility: hidden;
+}
+
+body {
+  font-family: "Inter Tight";
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */

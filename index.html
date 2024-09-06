@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Аутентифкация</title>
+	<link rel="stylesheet" href="style.css">
+	<script defer src="script.js"></script>
+</head>
+
+<body>
+	<article class="auth-form">
+		<h2 class="auth-form__title">Вход</h2>
+		<form class="auth-form__form" id="authForm">
+			<div class="auth-form__field field">
+				<input type="text" id="email" class="field__input" placeholder=" ">
+				<label for="email" class="field__label" spellcheck="false">Email</label>
+				<div class="field__error" id="emailError"></div>
+			</div>
+			<div class="auth-form__field field">
+				<input type="password" id="password" class="field__input" placeholder=" ">
+				<label for="password" class="field__label">Пароль</label>
+				<div id="showPassword" class="field__show-pass open" alt=""></div>
+				<div class="field__error" id="passwordError"></div>
+			</div>
+			<button type="submit" class="auth-form__button">Войти</button>
+			<p class="auth-form__message" id="message"></p>
+		</form>
+	</article>
+</body>
+
+</html>
