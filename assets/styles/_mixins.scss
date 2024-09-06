@@ -3,15 +3,3 @@
     @content;
   }
 }
-
-@mixin _1000 {
-  @media (max-width: 1000px) {
-    @content;
-  }
-}
-
-@mixin _840 {
-  @media (max-width: 840px) {
-    @content;
-  }
-}

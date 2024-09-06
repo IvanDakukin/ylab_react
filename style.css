@@ -32,6 +32,11 @@ input {
   color: #333;
   font-size: 30px;
 }
+@media (max-width: 550px) {
+  .auth-form__title {
+    font-size: 26px;
+  }
+}
 .auth-form__field {
   margin-bottom: 35px;
 }
@@ -49,8 +54,17 @@ input {
   margin: 40px auto;
   font-weight: bold;
 }
+@media (max-width: 550px) {
+  .auth-form__button {
+    font-size: 14px;
+  }
+}
 .auth-form__button:hover {
   background-color: #0056b3;
+}
+.auth-form__message {
+  font-size: 14px;
+  visibility: hidden;
 }
 
 .field {
@@ -69,6 +83,11 @@ input {
   top: 0;
   left: 20px;
 }
+@media (max-width: 550px) {
+  .field__label {
+    font-size: 12px;
+  }
+}
 .field__input {
   width: 100%;
   padding: 10px;
@@ -81,6 +100,11 @@ input {
   font-weight: bold;
   transition: border-color 0.3s;
   letter-spacing: 0.05em;
+}
+@media (max-width: 550px) {
+  .field__input {
+    font-size: 13px;
+  }
 }
 .field__input:focus {
   outline: none;
@@ -100,6 +124,12 @@ input {
   background-image: url("./assets/icons/eye-closed.svg");
   background-size: cover;
 }
+@media (max-width: 550px) {
+  .field__show-pass {
+    height: 25px;
+    width: 25px;
+  }
+}
 .field__show-pass.open {
   background-image: url("./assets/icons/eye.svg");
 }
@@ -111,13 +141,6 @@ input {
   font-size: 13px;
   color: rgb(212, 27, 27);
   border-radius: 4px;
-}
-
-.auth-form__button .auth-form__message {
-  margin-top: 15px;
-  font-size: 14px;
-  color: red;
-  visibility: hidden;
 }
 
 body {
